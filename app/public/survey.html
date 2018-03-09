@@ -21,29 +21,31 @@
       <h2 class="text-center">Please answer these 10 questions to find your BFFL</h2>
       <br>
     </div>
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" id="submit" novalidate>
       <div class="form-row">
         <div class="col-4">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="name" class="form-control" id="name" placeholder="Name">
-            <div class="invalid-feedback">Please instert your name!</div>
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Full name" required>
+            <div class="invalid-feedback">
+              Please enter name
+            </div>
           </div>
         </div>
         <div class="col-8">
           <div class="form-group">
             <label for="pic">Image URL</label>
-            <input type="pic" class="form-control" id="pic" placeholder="Example: http://static.twentytwowords.com/wp-content/uploads/crazyeyes.jpg">
+            <input type="text" class="form-control" id="pic" placeholder="Example: http://static.twentytwowords.com/wp-content/uploads/crazyeyes.jpg" required>
             <div class="invalid-feedback">Please place an image!</div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How much do you like food?</label>
-            <select class="form-control" id="question1">
+            <select class="form-control" id="question1" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -51,14 +53,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How much do you like Ryan Gosling</label>
-            <select class="form-control" id="question2">
+            <select class="form-control" id="question2" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -66,14 +71,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How fast would you walk if you felt like you were being followed?</label>
-            <select class="form-control" id="question3">
+            <select class="form-control" id="question3" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -81,14 +89,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How friendly are you?</label>
-            <select class="form-control" id="question4">
+            <select class="form-control" id="question4" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -96,14 +107,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">Pick a number..</label>
-            <select class="form-control" id="question5">
+            <select class="form-control" id="question5" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -111,14 +125,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">Rate your feelings</label>
-            <select class="form-control" id="question6">
+            <select class="form-control" id="question6" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -126,14 +143,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How much do you like clubbing in the artic?</label>
-            <select class="form-control" id="question7">
+            <select class="form-control" id="question7" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -141,14 +161,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How many selfies do you post a day?</label>
-            <select class="form-control" id="question8">
+            <select class="form-control" id="question8" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -156,14 +179,17 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How many times to you text your ex after you break up?</label>
-            <select class="form-control" id="question9">
+            <select class="form-control" id="question9" required>
               <option value="">Select a number</option>
               <option>1</option>
               <option>2</option>
@@ -171,15 +197,18 @@
               <option>4</option>
               <option>5</option>
             </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-8">
           <div class="form-group">
             <label for="exampleSelect1">How often (times a day) do you snap?
           </label>
-            <select class="form-control" id="question10">
+            <select class="form-control" id="question10" required>
             <option value="">Select a number</option>
             <option>1</option>
             <option>2</option>
@@ -187,12 +216,39 @@
             <option>4</option>
             <option>5</option>
           </select>
+            <div class="invalid-feedback">
+              Please choose your answer already, gosh!
+            </div>
           </div>
         </div>
       </div>
-    </form>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Launch demo modal
+      </button>
 
-    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <footer class="footer">
       <div class="container">
@@ -202,8 +258,5 @@
   </div>
   <script type="text/javascript" src="scripts.js"></script>
 </body>
-
-
-
 
 </html>
