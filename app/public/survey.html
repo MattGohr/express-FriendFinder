@@ -6,10 +6,8 @@
   <title>Tables Page</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -23,149 +21,178 @@
       <h2 class="text-center">Please answer these 10 questions to find your BFFL</h2>
       <br>
     </div>
+    <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" placeholder="Name">
+            <div class="invalid-feedback">Please instert your name!</div>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="form-group">
+            <label for="pic">Image URL</label>
+            <input type="pic" class="form-control" id="pic" placeholder="Example: http://static.twentytwowords.com/wp-content/uploads/crazyeyes.jpg">
+            <div class="invalid-feedback">Please place an image!</div>
+          </div>
+        </div>
+      </div>
 
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How much do you like food?</label>
-          <select class="form-control" id="question1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How much do you like food?</label>
+            <select class="form-control" id="question1">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How much do you like Ryan Gosling</label>
-          <select class="form-control" id="question2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How much do you like Ryan Gosling</label>
+            <select class="form-control" id="question2">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How fast would you walk if you felt like you were being followed?</label>
-          <select class="form-control" id="question3">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How fast would you walk if you felt like you were being followed?</label>
+            <select class="form-control" id="question3">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How friendly are you?</label>
-          <select class="form-control" id="question4">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How friendly are you?</label>
+            <select class="form-control" id="question4">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">Pick a number..</label>
-          <select class="form-control" id="question5">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">Pick a number..</label>
+            <select class="form-control" id="question5">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">Rate your feelings</label>
-          <select class="form-control" id="question6">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">Rate your feelings</label>
+            <select class="form-control" id="question6">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How much do you like clubbing in the artic?</label>
-          <select class="form-control" id="question7">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How much do you like clubbing in the artic?</label>
+            <select class="form-control" id="question7">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How many selfies do you post a day?</label>
-          <select class="form-control" id="question8">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How many selfies do you post a day?</label>
+            <select class="form-control" id="question8">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How many times to you text your ex after you break up?</label>
-          <select class="form-control" id="question9">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How many times to you text your ex after you break up?</label>
+            <select class="form-control" id="question9">
+              <option value="">Select a number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="exampleSelect1">How often (times a day) do you snap?</label>
-          <select class="form-control" id="question10">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="exampleSelect1">How often (times a day) do you snap?
+          </label>
+            <select class="form-control" id="question10">
+            <option value="">Select a number</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
 
-    <button type="button" id="submit" class="btn btn-secondary">Submit</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
 
     <footer class="footer">
       <div class="container">
@@ -173,7 +200,7 @@
     </footer>
 
   </div>
-<script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
 </body>
 
 
