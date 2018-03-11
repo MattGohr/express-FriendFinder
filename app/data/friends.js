@@ -7,7 +7,7 @@
 
 var tableArray = [{
     "name": "Margret",
-    "photo": "https://s-media-cache-ak0.pinimg.com/originals/e9/00/5f/e9005faf711c0aa9347dced6ea73d34f.jpg",
+    "photo": "https://i.imgur.com/Xp8Z1DO.jpg",
     "scores": [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
   },
   {
@@ -16,12 +16,12 @@ var tableArray = [{
     "scores": [ 3, 1, 4, 1, 2, 5, 5, 1, 4, 4]
   },
   {
-    "name": "Ahmed",
+    "name": "Big Birtha",
     "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWTcyqayg9hVfmZ5gT848hAx8da2bhSY9VmEPlX5rlnjZuuNwG",
     "scores": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
   },
   {
-    "name": "Tom",
+    "name": "Alex",
     "photo": "https://images-cdn.9gag.com/photo/anNM0mL_700b.jpg",
     "scores": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
   },
@@ -31,8 +31,8 @@ var tableArray = [{
     "scores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
   },
   {
-    "name": "Big Birtha",
-    "photo": "https://cdn.shopify.com/s/files/1/0344/6469/files/spacehug_large.jpg?v=1486054483",
+    "name": "Myrtle",
+    "photo": "https://faeriekat.files.wordpress.com/2013/12/glamour-shot-grandma.jpg",
     "scores": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
   },
   {

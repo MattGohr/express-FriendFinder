@@ -24,32 +24,32 @@ function addToFriends(event) {
   var myScore = [];
 
   function buildMyscoreArray(arr) {
-    var data = [];
+    var friends = [];
     for (var i = 1; i <= 10; i++) {
-      arr.push(Number($(`#question${i}`).val()));
+      arr.push(parseInt($(`#question${i}`).val()));
     }
-    // return data;
+    console.log(arr);;
   }
   buildMyscoreArray(myScore);
 
   var newFried = {
     name: $("#name").val(),
     photo: $("#pic").val(),
-    score: myScore
+    "scores": myScore
   }
 
   console.log(newFried);
 
-  $.get("/api/friends", function(data) {
-    console.log(data);
+  $.get("/api/friends", function(friends) {
+    console.log(friends);
     var myBestie, myBestieVal, firstRun = true;
 
-    for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < friends.length; i++) {
 
       var curFriendVal = 0;
 
-      for (var j = 0; j < data[i].scores.length; j++) {
-        var friendScore = data[i].scores[j];
+      for (var j = 0; j < friends[i].scores.length; j++) {
+        var friendScore = friends[i].scores[j];
         console.log(`fiend scores is ${friendScore} and my score is ${myScore[j]}`);
 
         curFriendVal = curFriendVal + Math.abs(friendScore - myScore[j]);
@@ -59,27 +59,33 @@ function addToFriends(event) {
 
       if (firstRun) {
         myBestieVal = curFriendVal;
-        myBestie = data[i];
+        myBestie = friends[i];
         firstRun = false;
-        console.log(`new bestie is ${data[i].name}`);
+        console.log(`new bestie is ${friends[i].name}`);
       } else if (curFriendVal < myBestieVal) {
-        console.log(`new bestie is ${data[i].name}`);
-        myBestie = data[i];
+        console.log(`new bestie is ${friends[i].name}`);
+        myBestie = friends[i];
         myBestieVal = curFriendVal;
       };
+      console.log(`i = ${i}`);
     }
 
-    
+    console.log(`my bestie name ${myBestie.name}`);
+    console.log(`my bestie photo ${myBestie.photo}`);
+
+    $(`#bestieName`).text(myBestie.name);
+    $(`#bestieImg`).attr('src', myBestie.photo);
+
     $('#myModal').modal('show');
 
     $.post("/api/friends", newFried,
       function(isDataThere) {
-        console.log(`is your data there ${isDataThere}`);
+        console.log(`is your friends there ${isDataThere}`);
       });
   });
 };
 
 $("#okBtn").on("click", function(event) {
-  // location.reload();
+  location.reload();
 
 })
