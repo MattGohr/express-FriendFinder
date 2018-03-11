@@ -10,59 +10,61 @@ var validation = Array.prototype.filter.call(forms, function(form) {
       event.stopPropagation();
     } else {
       $('#myModal').modal('show');
+      event.preventDefault();
+      addToFriends(event);
     }
     form.classList.add('was-validated');
-
-
   }, false);
 });
 
 
 
-$("#submit").submit(function(event) {
+function addToFriends(event) {
   event.preventDefault();
   // Here we grab the form elements
+  var myScore = [];
+
+  function buildMyscoreArray(arr) {
+    var data = [];
+    for (var i = 1; i <= 10; i++) {
+      arr.push(Number($(`#question${i}`).val()));
+    }
+    // return data;
+  }
+ buildMyscoreArray(myScore);
+
   var newFried = {
     name: $("#name").val(),
     photo: $("#pic").val(),
-    score: [
-      $("#question1").val(),
-      $("#question2").val(),
-      $("#question3").val(),
-      $("#question4").val(),
-      $("#question5").val(),
-      $("#question6").val(),
-      $("#question7").val(),
-      $("#question8").val(),
-      $("#question9").val(),
-      $("#question10").val(),
-    ]
+    score: myScore
   }
 
   console.log(newFried);
 
-  // This line is the magic. It"s very similar to the standard ajax function we used.
-  // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-  // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-  // depending on if a tables is available or not.
-
-  $.post("/api/friends", newFried,
-    function(data) {
-
-      // If a table is available... tell user they are booked.
-      if (data) {
-        console.log("Yay! You are officially booked!");
-      }
-
-      // If a table is available... tell user they on the waiting list.
-      else {
-        console.log("Sorry you are on the wait list");
-      }
-
-
-    });
   $.get("/api/friends", function(data) {
     console.log(data);
+
+    for (var i = 0; i < data.length; i++) {
+      console.log(data[i].score);
+    };
+    $.post("/api/friends", newFried,
+      function(data) {
+
+        // If a table is available... tell user they are booked.
+        if (data) {
+          console.log("Yay! You are officially booked!");
+        }
+
+        // If a table is available... tell user they on the waiting list.
+        else {
+          console.log("Sorry you are on the wait list");
+        }
+      });
   });
 
-});
+};
+
+$("#okBtn").on("click", function(event) {
+  // location.reload();
+
+})
