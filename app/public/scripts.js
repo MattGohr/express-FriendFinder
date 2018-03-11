@@ -9,7 +9,6 @@ var validation = Array.prototype.filter.call(forms, function(form) {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      $('#myModal').modal('show');
       event.preventDefault();
       addToFriends(event);
     }
@@ -69,14 +68,13 @@ function addToFriends(event) {
         myBestieVal = curFriendVal;
       };
     }
+
+    
+    $('#myModal').modal('show');
+
     $.post("/api/friends", newFried,
       function(isDataThere) {
-
-        if (isDataThere) {
-          console.log(`here's your data: \n${isDataThere}`);
-        } else {
-          console.log("There's no data for you!");
-        }
+        console.log(`is your data there ${isDataThere}`);
       });
   });
 };
