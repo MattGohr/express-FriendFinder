@@ -31,7 +31,7 @@ function addToFriends(event) {
     }
     // return data;
   }
- buildMyscoreArray(myScore);
+  buildMyscoreArray(myScore);
 
   var newFried = {
     name: $("#name").val(),
@@ -43,25 +43,42 @@ function addToFriends(event) {
 
   $.get("/api/friends", function(data) {
     console.log(data);
+    var myBestie, myBestieVal, firstRun = true;
 
     for (var i = 0; i < data.length; i++) {
-      console.log(data[i].score);
-    };
+
+      var curFriendVal = 0;
+
+      for (var j = 0; j < data[i].scores.length; j++) {
+        var friendScore = data[i].scores[j];
+        console.log(`fiend scores is ${friendScore} and my score is ${myScore[j]}`);
+
+        curFriendVal = curFriendVal + Math.abs(friendScore - myScore[j]);
+      }
+
+      console.log(`current friend val is ${curFriendVal} and my bestie val is ${myBestieVal}`);
+
+      if (firstRun) {
+        myBestieVal = curFriendVal;
+        myBestie = data[i];
+        firstRun = false;
+        console.log(`new bestie is ${data[i].name}`);
+      } else if (curFriendVal < myBestieVal) {
+        console.log(`new bestie is ${data[i].name}`);
+        myBestie = data[i];
+        myBestieVal = curFriendVal;
+      };
+    }
     $.post("/api/friends", newFried,
-      function(data) {
+      function(isDataThere) {
 
-        // If a table is available... tell user they are booked.
-        if (data) {
-          console.log("Yay! You are officially booked!");
-        }
-
-        // If a table is available... tell user they on the waiting list.
-        else {
-          console.log("Sorry you are on the wait list");
+        if (isDataThere) {
+          console.log(`here's your data: \n${isDataThere}`);
+        } else {
+          console.log("There's no data for you!");
         }
       });
   });
-
 };
 
 $("#okBtn").on("click", function(event) {
