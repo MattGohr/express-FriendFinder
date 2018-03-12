@@ -21,22 +21,21 @@ var validation = Array.prototype.filter.call(forms, function(form) {
 function addToFriends(event) {
   event.preventDefault();
   // Here we grab the form elements
-  var myScore = [];
-
-  function buildMyscoreArray(arr) {
-    var friends = [];
-    for (var i = 1; i <= 10; i++) {
-      arr.push(parseInt($(`#question${i}`).val()));
-    }
-    console.log(arr);;
-  }
-  buildMyscoreArray(myScore);
 
   var newFried = {
     name: $("#name").val(),
     photo: $("#pic").val(),
-    "scores": myScore
+    "scores": []
   }
+  console.log(newFried.scores);
+
+  function buildMyscoreArray() {
+    var friends = [];
+    for (var i = 1; i <= 10; i++) {
+      newFried.scores.push(parseInt($(`#question${i}`).val()));
+    }
+  }
+  buildMyscoreArray();
 
   console.log(newFried);
 
@@ -47,12 +46,13 @@ function addToFriends(event) {
     for (var i = 0; i < friends.length; i++) {
 
       var curFriendVal = 0;
+      console.log(typeof(friends[i].scores));
 
       for (var j = 0; j < friends[i].scores.length; j++) {
         var friendScore = friends[i].scores[j];
-        console.log(`fiend scores is ${friendScore} and my score is ${myScore[j]}`);
+        console.log(`fiend scores is ${friendScore} and my score is ${newFried.scores[j]}`);
 
-        curFriendVal = curFriendVal + Math.abs(friendScore - myScore[j]);
+        curFriendVal = curFriendVal + Math.abs(friendScore - newFried.scores[j]);
       }
 
       console.log(`current friend val is ${curFriendVal} and my bestie val is ${myBestieVal}`);
