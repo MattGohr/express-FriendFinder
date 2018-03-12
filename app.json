@@ -1,0 +1,8 @@
+{
+  "name": "Friend Finder Matt Gohr",
+  "description": "A Friend Finder App",
+  "repository": "https://github.com/MattGohr/express-FriendFinder",
+  "logo": "",
+  "keywords": ["node", "Matt Gohr", "express", "heroku"],
+  "image": ""
+}
